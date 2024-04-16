@@ -1,0 +1,27 @@
+
+
+# Adding CSS to the sharepoint page
+
+https://sharepoint.stackexchange.com/questions/89297/master-page-option-from-site-look-and-feel-is-missing
+
+https://thomasdaly.net/2017/10/29/the-easiest-way-to-attach-css-or-javascript-to-your-office-365-or-sharepoint-site/
+
+Option 4 [My Favorite for Quick & Easy Applications] +SP-Editor / Chrome Only
+
+
+
+[Download SP Editor plugin from the Chrome Store](https://chrome.google.com/webstore/detail/sp-editor/ecblfcmjnbbgaojblcpmjoamegpbodhd)
+
+Once you have the plugin installed and navigated to your SharePoint site, hit F12 to open the developer tools bar.
+
+Click on the SharePoint tab and then click ScriptLinks. Here you can enter the sequence number to order your CSS references or JavaScript links. You also enter a site collection relative url from JavaScript only. After you enter that information, Click on the Add ScriptLink dropdown and select either current web or site collection
+
+[](./add_css_guide.webp)
+
+
+Pros:
+Super Fast & Easy
+Quickly apply CSS or JavaScript to a site or web (sub site) using the browser
+
+Cons:
+Requires Chrome [only a con if your organization doesn’t allow you to have Chrome] Manual process, not scriptable or repeatable.
