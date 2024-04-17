@@ -20,6 +20,14 @@ for item in content_items:
     item.replace_with(div_tag)
 
 
+content_items = soup.select('.large-pallet > div > div > div:nth-of-type(2)')
+for item in content_items:
+    div_tag = soup.new_tag('div')
+    div_tag['style'] = item['style']
+    div_tag.append("{{library.metodologia.algodao}}")
+    item.replace_with(div_tag)
+
+
 # Save the modified HTML to 'output.html'
 with open('pages/metodologia/transition.html', 'w', encoding='utf-8') as file:
     file.write(str(soup))
