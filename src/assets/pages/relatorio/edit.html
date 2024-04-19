@@ -5,6 +5,34 @@
     <link href="https://www.imea.com.br/imea-site/view/css/bootstrap.min.css" rel="stylesheet" />
     <link href="https://www.imea.com.br/imea-site/view/css/core.css" rel="stylesheet" />
     <link href="https://www.imea.com.br/imea-site/view/css/relatoriosmercado.css" rel="stylesheet" />
+
+    <style>
+        .wrapper {
+            max-width: 100% !important;
+        }
+        body, html {
+            height: fit-content !important;
+            background: transparent;
+        }
+
+    </style>
+    <script>
+        function replaceOnClick() {
+            var aTags = document.getElementsByTagName('a');
+            for (let aTag of aTags) {
+                aTags.onclick = function(event) {
+                    event.preventDefault();
+                    var url = aTag.getAttribute('href');
+                    window.parent.location.href = url;
+                };
+            }
+        }
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            replaceOnClick();
+        });
+        </script>
+
 </head>
 
 <body class="hold-transition skin-blue sidebar-mini sidebar-collapse vsc-initialized">
@@ -20,7 +48,7 @@
                         <div class="content-item">
                             <div class="item-content">
                                 <div class="content-item-body"><a
-                                        href="https://www.imea.com.br/imea-site/relatorios-mercado-detalhe?c=4&amp;s=809881640863047681"><img
+                                        href="https://sharepointtestfreetrial.sharepoint.com/sites/ImeaExample%E2%80%8ESite/SitePages/Relat%C3%B3rio-Detalhado-Boletim-Soja.aspx"><img
                                             height="95"
                                             src="https://www.imea.com.br/imea-site/view/img/image-boletim-soja.png"
                                             style="margin-left: 32px; margin-top: 10px;" /> <img class="plus-img"
@@ -145,7 +173,7 @@
                         <div class="col-md-12 content-item" id="boletin-milho">
                             <div class="item-content">
                                 <div class="content-item-body"><a
-                                        href="https://www.imea.com.br/imea-site/relatorios-mercado-detalhe?c=3&amp;s=809881640863047681"><img
+                                        href="https://sharepointtestfreetrial.sharepoint.com/sites/ImeaExample%E2%80%8ESite/SitePages/Relat%C3%B3rio-Detalhado-Boletim-Milho.aspx"><img
                                             height="95"
                                             src="https://www.imea.com.br/imea-site/view/img/image-boletins-milho.png"
                                             style="margin-left: 32px; margin-top: 10px;" /> <img class="plus-img"
@@ -255,7 +283,7 @@
                         <div class="col-md-12 content-item" id="boletin-algodao">
                             <div class="item-content">
                                 <div class="content-item-body"><a
-                                        href="https://www.imea.com.br/imea-site/relatorios-mercado-detalhe?c=1&amp;s=809881640863047681"><img
+                                        href="https://sharepointtestfreetrial.sharepoint.com/sites/ImeaExample%E2%80%8ESite/SitePages/Relat%C3%B3rio-Detalhado-Boletim-Algodao.aspx"><img
                                             height="95"
                                             src="https://www.imea.com.br/imea-site/view/img/image-boletins-algodao.png"
                                             style="margin-left: 32px; margin-top: 10px;" /><img class="plus-img"
@@ -342,21 +370,6 @@
                                 <div class="content-item-footer"><span>Colheita</span></div>
                             </div>
                         </div>
-                        <div class="col-md-12 content-item" id="semeadura-algodao">
-                            <div class="item-content">
-                                <div class="content-item-body">
-                                    <div><img height="95"
-                                            src="https://www.imea.com.br/imea-site/view/img/Relatorio-de-Mercado/Semeadura-Algodão.png"
-                                            style="margin-left: 32px; margin-top: 10px;" /> <img class="plus-img"
-                                            height="16"
-                                            src="https://www.imea.com.br/imea-site/view/img/icon-small-plus.png" /> <img
-                                            class="mobile-icon-rel" height="64"
-                                            src="https://www.imea.com.br/imea-site/view/img/icon-indice-algodao-in.png" />
-                                    </div>
-                                </div>
-                                <div class="content-item-footer"><span>Semeadura</span></div>
-                            </div>
-                        </div>
                     </div>
                 </div>
                 <div class="cadeia">
@@ -365,7 +378,7 @@
                         <div class="col-md-12 content-item" id="boletin-boi">
                             <div class="item-content">
                                 <div class="content-item-body"><a
-                                        href="https://www.imea.com.br/imea-site/relatorios-mercado-detalhe?c=2&amp;s=809881640863047681"><img
+                                        href="https://sharepointtestfreetrial.sharepoint.com/sites/ImeaExample%E2%80%8ESite/SitePages/Relat%C3%B3rio-Detalhado-Boletim-Boi.aspx"><img
                                             height="95"
                                             src="https://www.imea.com.br/imea-site/view/img/image-boletins-boi.png"
                                             style="margin-left: 32px; margin-top: 10px;" /><img class="plus-img"
@@ -445,7 +458,7 @@
                         <div class="col-md-12 content-item" id="boletin-leite">
                             <div class="item-content">
                                 <div class="content-item-body"><a
-                                        href="https://www.imea.com.br/imea-site/relatorios-mercado-detalhe?c=8&amp;s=809881640863047681"><img
+                                        href="https://sharepointtestfreetrial.sharepoint.com/sites/ImeaExample%E2%80%8ESite/SitePages/Relat%C3%B3rio-Detalhado-Boletim-Leite.aspx"><img
                                             height="95"
                                             src="https://www.imea.com.br/imea-site/view/img/image-boletim-leite.png"
                                             style="margin-left: 32px; margin-top: 10px;" /><img class="plus-img"
@@ -484,7 +497,7 @@
                                             src="https://www.imea.com.br/imea-site/view/img/icon-indice-algodao-in.png" />
                                     </div>
                                 </div>
-                                <div class="content-item-footer"><span>Cartilha do ILC</span></div>
+                                <div class="content-item-footer"><span>Cartilha do ILC</span></div>
                             </div>
                         </div>
                     </div>
@@ -515,7 +528,7 @@
                         <div class="col-md-12 content-item" id="boletin-conjuntura">
                             <div class="item-content">
                                 <div class="content-item-body"><a
-                                        href="https://www.imea.com.br/imea-site/relatorios-mercado-detalhe?c=5&amp;s=809881640863047681"><img
+                                        href="https://sharepointtestfreetrial.sharepoint.com/sites/ImeaExample%E2%80%8ESite/SitePages/Relat%C3%B3rio-Detalhado-Boletim-Conjuntura.aspx"><img
                                             height="95"
                                             src="https://www.imea.com.br/imea-site/view/img/image-boletins-conjuntura.png"
                                             style="margin-left: 32px; margin-top: 10px;" /><img class="plus-img"
@@ -561,6 +574,9 @@
             </section>
         </div>
     </div>
+    <script>
+
+    </script>
 </body>
 
 </html>

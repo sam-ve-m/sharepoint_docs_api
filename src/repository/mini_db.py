@@ -14,8 +14,8 @@ class MiniDB:
             full_db = json.loads(file.read())
             return full_db
 
-    def get(self, key: str) -> any:
-        return self._read().get(key)
+    def get(self, key: str, default=None) -> any:
+        return self._read().get(key, default)
 
     def set(self, key: str, value):
         full_db = self._read()

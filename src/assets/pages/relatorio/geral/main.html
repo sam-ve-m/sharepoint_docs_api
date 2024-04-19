@@ -1,0 +1,101 @@
+ 
+<head>
+   <link href="https://www.imea.com.br/imea-site/view/css/bootstrap.min.css" rel="stylesheet" />
+   <link href="https://www.imea.com.br/imea-site/view/css/core.css" rel="stylesheet" />
+   <link href="https://www.imea.com.br/imea-site/view/css/relatoriosmercado.css" rel="stylesheet" />
+   <link href="https://www.imea.com.br/imea-site/view/css/relatoriosmercadodetalhe.css" rel="stylesheet" />
+</head>
+
+
+{{warning-dialog}}
+
+<div class="wrapper"> {{ icons-box-secundary }} 
+   <div id="RelatorioDetalheApp" class="content-wrapper"> 
+      <section class="content"> {{relatorio-detalhe-header}} 
+         <div id="tab-box" class="row pecuaria">
+            <div class="col-md-12 tab-header">
+               <h2 class="tab-header-title">Boletins</h2>
+            </div>
+            xs
+         </div> </section> </div>
+</div> 
+
+<script>
+
+   function insertText(text) {
+       const div = document.getElementsByClassName('tab-header-title')[0];
+   }
+
+   function highlight_field(text) {
+      const icon = document.getElementById(`item-${text.toLowerCase()}`);
+      if (icon) {
+         icon.classList.add('active')
+      }
+   }
+
+   function set_boletins_links(){
+      var boletins = ['Soja','Milho','Algodao','Boi','Leite','Conjuntura'];
+      for (let boletim of boletins) {
+         const icon = document.getElementById(`item-${boletim.toLowerCase()}`);
+         icon.onclick = function() {
+            window.parent.location.href = `https://sharepointtestfreetrial.sharepoint.com/sites/ImeaExample%E2%80%8ESite/SitePages/Relat%C3%B3rio-Detalhado-Boletim-${boletim}.aspx`;
+         };
+      }
+      const icon_suino = document.getElementById('item-suino');
+      icon_suino.onclick = show_warning_dialog;
+
+   }
+
+   var page_path = window.parent.location.pathname.split("/");
+   var page_name = page_path[page_path.length - 1].split("-");
+
+   const reportField = page_name[page_name.length-1].split(".")[0];
+   const reportType = page_name[page_name.length-2];
+
+   if (reportType) {
+       insertText(reportType);
+       if (reportType==="Boletim"){
+         set_boletins_links();
+       }
+   } else {
+       insertText('All Reports');
+   }
+   if (reportField){
+      highlight_field(reportField);
+   }
+
+</script>
+
+<style>
+    #tab-box > div {
+      margin-top: 15px;
+      background-color: transparent !important;
+      height: fit-content !important;
+   }
+
+   #tab-box > div > h2 {
+      font-size: xxx-large !important;
+      font-weight: bold !important;
+   }
+
+   body, html {
+      height: fit-content !important;
+      background: transparent;
+   }
+
+   #box-header {
+      margin-top: 0px !important;
+   }
+
+   .wrapper {
+      max-width: 100% !important;
+   }
+
+   .header-item {
+      background-color: transparent !important;
+   }
+
+   #tab-box {
+      height: 0px !important;
+   }
+</style>

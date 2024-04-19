@@ -1,0 +1,16 @@
+https://techcommunity.microsoft.com/t5/sharepoint/displaying-doclib-file-url-path-in-column/m-p/3876909
+
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/column-formatting.schema.json",
+  "elmType": "div",
+  "style": {
+    "box-sizing": "border-box",
+    "padding": "0 2px",
+    "overflow": "hidden",
+    "text-overflow": "ellipsis"
+  },
+  "attributes": {
+    "class": "sp-field-fontSizeSmall "
+  },
+  "txtContent": "=replace(replace([$FileRef],'/sites/ImeaExample\u200ESite/Shared Documents/',''),'/'+[$FileLeafRef],'')"
+}
