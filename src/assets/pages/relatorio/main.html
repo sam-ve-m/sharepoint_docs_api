@@ -574,7 +574,56 @@
             </section>
         </div>
     </div>
+    <style>
+        .items {
+            display: none;
+            overflow: hidden;
+            transition: height 0.3s ease-in-out;
+        }
+
+        .items.show {
+            display: block;
+        }
+
+        .header-item {
+            cursor: pointer;
+        }
+    </style>
+
     <script>
+
+        document.addEventListener("DOMContentLoaded", function() {
+            var headerItems = document.querySelectorAll(".header-item");
+
+            function showElement(element){
+                element.style.display = "block";
+                    element.style.height = "auto";
+                    var height = element.clientHeight + "px";
+                    element.style.height = "0px";
+                    setTimeout(function() {
+                        element.style.height = height;
+                    }, 0);
+                    element.classList.add("show");
+            }
+
+            headerItems.forEach(function(item) {
+                showElement(item.nextElementSibling);
+                item.addEventListener("click", function() {
+                    var items = this.nextElementSibling;
+                    toggleSlide(items);
+                });
+            });
+
+            function toggleSlide(element) {
+                if (element.classList.contains("show")) {
+                    element.style.height = "0px";
+                    element.classList.remove("show");
+                } else {
+                    showElement(element);
+                }
+            }
+        });
+
 
     </script>
 </body>
