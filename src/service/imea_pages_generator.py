@@ -48,18 +48,18 @@ class ImeaPagesGenerator(PagesGenerator):
 
     def relatorios(self):
         page = self._replace_common_assets("relatorio", "main.html", save_name="final.html").encode('utf-8')
-        self.sharepoint_repository.upload_page("Relatorios.aspx", page, "Pages")
+        self.sharepoint_repository.upload_page("Relatorios.html", page, "Pages")
         return self
 
     def _relatiorios_detalhados_header(self):
         page = self._replace_common_assets("relatorio", "geral", "main.html", save_name="final.html").encode('utf-8')
-        self.sharepoint_repository.upload_page("RelatoriosDetalhados.aspx", page, "Pages")
+        self.sharepoint_repository.upload_page("RelatoriosDetalhados.html", page, "Pages")
         return self
 
     def _relatiorios_detalhados_side_image(self):
         page = self._replace_common_assets("relatorio", "side-image", "main.html", save_name="final.html").encode(
             'utf-8')
-        self.sharepoint_repository.upload_page("RelatoriosDetalhadosSideImage.aspx", page, "Pages")
+        self.sharepoint_repository.upload_page("RelatoriosDetalhadosSideImage.html", page, "Pages")
         return self
 
     def relatorios_detalhados(self):

@@ -1,35 +1,35 @@
-
-<img></img> 
-
-<script>
-
-   const names_map = {
-      ["boletim-soja"]: "image-boletim-soja-large.png",
-      ["boletim-milho"]: "image-boletins-milho-large.png",
-      ["boletim-algodao"]: "image-boletins-algodao-large.png",
-      ["boletim-boi"]: "image-boletins-boi-large.png",
-      ["boletim-leite"]: "image-boletim-leite-large.png",
-      ["boletim-conjuntura"]: "image-boletins-conjuntura-large.png",
-   };
-
-   console.log("Hey");
-   const img = document.getElementsByTagName('img')[0];
-
-   var page_path = window.parent.location.pathname.split("/");
-   var page_name = page_path[page_path.length - 1].split("-");
-
-   const reportField = page_name[page_name.length-1].split(".")[0].toLowerCase();
-   const reportType = page_name[page_name.length-2].toLowerCase();
-
-   const img_file_name = names_map[`${reportType}-${reportField}`]
-
-   const img_src = `https://www.imea.com.br/imea-site/view/img/${img_file_name}`;
-   img.setAttribute("src", img_src);
-</script>
-
-<style>
-    img {
-      width: 100%;
-      height: 100%;
-   }
+
+<img></img> 
+
+<script>
+
+   const names_map = {
+      ["boletim-soja"]: "image-boletim-soja-large.png",
+      ["boletim-milho"]: "image-boletins-milho-large.png",
+      ["boletim-algodao"]: "image-boletins-algodao-large.png",
+      ["boletim-boi"]: "image-boletins-boi-large.png",
+      ["boletim-leite"]: "image-boletim-leite-large.png",
+      ["boletim-conjuntura"]: "image-boletins-conjuntura-large.png",
+   };
+
+   console.log("Hey");
+   const img = document.getElementsByTagName('img')[0];
+
+   var page_path = window.parent.location.pathname.split("/");
+   var page_name = page_path[page_path.length - 1].split("-");
+
+   const reportField = page_name[page_name.length-1].split(".")[0].toLowerCase();
+   const reportType = page_name[page_name.length-2].toLowerCase();
+
+   const img_file_name = names_map[`${reportType}-${reportField}`]
+
+   const img_src = `https://www.imea.com.br/imea-site/view/img/${img_file_name}`;
+   img.setAttribute("src", img_src);
+</script>
+
+<style>
+    img {
+      width: 100%;
+      height: 100%;
+   }
 </style>
