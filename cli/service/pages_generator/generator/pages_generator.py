@@ -1,7 +1,7 @@
 import html
 import os
 
-from src.repository.sharepoint import Sharepoint
+from cli.repository.sharepoint import Sharepoint
 
 
 class PagesGenerator:

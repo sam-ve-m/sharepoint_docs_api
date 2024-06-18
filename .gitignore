@@ -8,6 +8,7 @@ __pycache__/
 .env
 .idea
 *database.json
+*sharepoint_auth.json
 
 # Distribution / packaging
 .Python
@@ -17,7 +18,8 @@ dist/
 downloads/
 eggs/
 .eggs/
-lib/
+lib/src/
+temp/
 lib64/
 parts/
 sdist/

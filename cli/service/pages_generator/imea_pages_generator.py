@@ -1,6 +1,6 @@
 import os
 
-from src.service.generator.pages_generator import PagesGenerator
+from cli.service.pages_generator.generator.pages_generator import PagesGenerator
 
 
 def remove_diacritics(input_str):
