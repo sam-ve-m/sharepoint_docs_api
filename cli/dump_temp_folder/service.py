@@ -1,4 +1,5 @@
 import multiprocessing
+from decouple import config
 import os
 
 from sharepoint_api_transport import SharepointDocumentsApi
@@ -10,7 +11,11 @@ class DumpFolder:
         self.files = []
         self.search_file()
         self.sharepoint = SharepointDocumentsApi(
-
+            site_url=config("SHAREPOINT_SITE_URL"),
+            client_id=config("SHAREPOINT_CLIENT_ID"),
+            client_secret=config("SHAREPOINT_CLIENT_SECRET"),
+            tenant_id=config("SHAREPOINT_TENANT_ID", None),
+            cache_json_file_path=config("CACHE_FILE_PATH", None),
         )
 
     def search_file(self):

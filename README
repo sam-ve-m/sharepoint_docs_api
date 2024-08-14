@@ -1,4 +1,11 @@
-Usage:
+# Install requirements
+
+
+```bash
+pip install requests
+```
+
+# Usage
 
 ```python
 from sharepoint_api_transport import SharepointDocumentsApi
