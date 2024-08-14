@@ -1,4 +1,4 @@
-from cli.dumo_temp_folder.service import DumpFolder
+from cli.dump_temp_folder.service import DumpFolder
 
 
 if __name__ == "__main__":

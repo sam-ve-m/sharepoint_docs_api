@@ -1,0 +1,19 @@
+Usage:
+
+```python
+from sharepoint_api_transport import SharepointDocumentsApi
+
+sharepoint_docs_api = SharepointDocumentsApi(
+    site_url="site_url",
+    client_id="client_id",
+    client_secret="client_secret",
+    proxies={},
+    tenant_id="tenant_id", #Opcional
+    cache_json_file_path="cache_json_file_path", #Opcional, use for tests only
+)
+
+file_name = "Brazil/General/Exports/BRA_Monthly_Exports_SECEX_2024_06_06.pdf"
+file_path = "D:\OneDrive - UBC\Projects\Profissional\sharepoint-jbs\upload-python-lib\temp\Brazil\General\Exports\BRA_Monthly_Exports_SECEX_2024_06_06.pdf"
+
+sharepoint_docs_api.upload_file_by_path(file_name, file_path)
+```

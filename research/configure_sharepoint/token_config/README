@@ -2,8 +2,8 @@
 
 https://global-sharepoint.com/sharepoint/in-4-steps-access-sharepoint-online-data-using-postman-tool/#Register_Add-In_%E2%80%93_SharePoint_online
 
-<AppPermissionRequests AllowAppOnlyPolicy="true">  
-  <AppPermissionRequest Scope="http://sharepoint/content/sitecollection/web" 
+<AppPermissionRequests AllowAppOnlyPolicy="true">
+  <AppPermissionRequest Scope="http://sharepoint/content/sitecollection/web"
    Right="FullControl" />
 </AppPermissionRequests>
 
@@ -13,3 +13,11 @@ https://learn.microsoft.com/en-us/answers/questions/714147/token-type-is-not-all
 
 # Remember to disable the checkout requirement for uploaded files
 
+
+
+Install-Module -Name Microsoft.Online.SharePoint.PowerShell
+$adminUPN="<the full email address of a SharePoint administrator account, example: jdoe@contosotoycompany.onmicrosoft.com>"
+$orgName="samvemfreetrial4"
+$userCredential = Get-Credential -UserName $adminUPN -Message "#Africa0202"
+Connect-SPOService -Url https://samvemfreetrial4-admin.sharepoint.com -Credential $userCredential
+set-spotenant -DisableCustomAppAuthentication $false

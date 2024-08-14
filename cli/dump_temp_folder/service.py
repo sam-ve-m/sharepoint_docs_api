@@ -1,7 +1,7 @@
 import multiprocessing
 import os
 
-from lib import SharepointDocuments
+from sharepoint_api_transport import SharepointDocumentsApi
 
 
 class DumpFolder:
@@ -9,7 +9,9 @@ class DumpFolder:
         self.folder = folder
         self.files = []
         self.search_file()
-        self.sharepoint = SharepointDocuments()
+        self.sharepoint = SharepointDocumentsApi(
+
+        )
 
     def search_file(self):
         for root, directories, files in os.walk(self.folder):
@@ -19,13 +21,10 @@ class DumpFolder:
 
     def upload_file(self, file_path: str):
         file_name = file_path.replace(self.folder, "")
-        if file_name[0] in ("\\", "/"):
-            file_name = file_name[1:]
-        with open(file_path, "wb") as file:
-            file_content = file.read()
-        self.sharepoint.upload_file(file_name, file_content)
+        self.sharepoint.upload_file_by_path(file_name, file_path)
 
     def upload_files(self):
+        self.upload_file(self.files[0])
         with multiprocessing.Pool(processes=multiprocessing.cpu_count()) as pool:
             pool.map(self.upload_file, self.files)
 

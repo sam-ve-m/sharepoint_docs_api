@@ -18,7 +18,7 @@ dist/
 downloads/
 eggs/
 .eggs/
-lib/src/
+sharepoint_api_transport/src/
 temp/
 lib64/
 parts/

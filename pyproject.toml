@@ -8,6 +8,8 @@ packages = [{include = "lib"}]
 [tool.poetry.dependencies]
 python = "^3.9"
 
+[tool.poetry.scripts]
+sharepoint-transport = "lib.main"  # Replace with your actual module and function
 
 [build-system]
 requires = ["poetry-core"]
